@@ -1,26 +1,25 @@
-# Task 1 – Titanic Survival Prediction
+# Task 2 – Movie Rating Prediction
 
 ## Objective
-Predict whether a passenger survived the Titanic disaster based on features like age, gender, ticket class, and fare.
+Build a regression model to predict the rating of an Indian movie based on features like genre, director, and actors.
 
 ## Dataset
-- Source: [Kaggle – Titanic Dataset](https://www.kaggle.com/datasets/brendan45774/test-file)
-- File needed: `tested.csv`
-- Place it in this folder before running the script.
+- Source: [Kaggle – IMDb India Movies](https://www.kaggle.com/datasets/adrianmcmahon/imdb-india-movies)
+- File needed: `IMDb Movies India.csv`
+- Place it in this folder before running.
 
 ## Approach
-- Handled missing values in Age, Fare, and Embarked columns
-- Dropped the Cabin column due to too many missing entries
-- Encoded categorical columns (Sex, Embarked) as numbers
-- Trained a Logistic Regression model on 80% of the data
-- Evaluated on the remaining 20%
+- Cleaned Votes (removed commas), Duration (removed "min"), and extracted Year from string
+- Used **frequency encoding** for Director, Genre, and Actor 1 — maps each to how many movies they appear in
+- Trained a Random Forest Regressor
+- Evaluated using MAE and R² score
 
 ## Results
-- **Model:** Logistic Regression
-- **Accuracy:** ~80%
-- **Key finding:** Gender (female) and passenger class (1st class) had the strongest positive influence on survival
+- **Model:** Random Forest Regressor
+- **MAE:** ~0.5 (predictions are within ~0.5 rating points on average)
+- **Key finding:** Number of votes and director frequency had the highest influence on predicted rating
 
 ## How to Run
 ```bash
-python titanic_prediction.py
+python movie_rating_prediction.py
 ```
