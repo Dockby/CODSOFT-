@@ -19,7 +19,4 @@ Build a regression model to predict the rating of an Indian movie based on featu
 - **MAE:** ~0.5 (predictions are within ~0.5 rating points on average)
 - **Key finding:** Number of votes and director frequency had the highest influence on predicted rating
 
-## How to Run
-```bash
-python movie_rating_prediction.py
-```
+
