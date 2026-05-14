@@ -19,7 +19,3 @@ Predict the sales of a product based on advertising budgets spent on TV, Radio, 
 - **R² Score:** ~0.90
 - **Key finding:** TV and Radio spending are the strongest predictors of sales. Newspaper has very little impact.
 
-## How to Run
-```bash
-python sales_prediction.py
-```
