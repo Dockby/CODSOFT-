@@ -1,25 +1,25 @@
-# Task 2 – Movie Rating Prediction
+# Task 4 – Sales Prediction using Python
 
 ## Objective
-Build a regression model to predict the rating of an Indian movie based on features like genre, director, and actors.
+Predict the sales of a product based on advertising budgets spent on TV, Radio, and Newspaper channels.
 
 ## Dataset
-- Source: [Kaggle – IMDb India Movies](https://www.kaggle.com/datasets/adrianmcmahon/imdb-india-movies)
-- File needed: `IMDb Movies India.csv`
+- Source: [Kaggle – Advertising Dataset](https://www.kaggle.com/datasets/ashydv/advertising-dataset)
+- File needed: `advertising.csv`
 - Place it in this folder before running.
 
 ## Approach
-- Cleaned Votes (removed commas), Duration (removed "min"), and extracted Year from string
-- Used **frequency encoding** for Director, Genre, and Actor 1 — maps each to how many movies they appear in
-- Trained a Random Forest Regressor
-- Evaluated using MAE and R² score
+- Explored correlation between each advertising channel and sales
+- Trained a Linear Regression model using TV, Radio, and Newspaper spend as features
+- Evaluated using MAE, RMSE, and R² score
+- Added a manual prediction example at the end
 
 ## Results
-- **Model:** Random Forest Regressor
-- **MAE:** ~0.5 (predictions are within ~0.5 rating points on average)
-- **Key finding:** Number of votes and director frequency had the highest influence on predicted rating
+- **Model:** Linear Regression
+- **R² Score:** ~0.90
+- **Key finding:** TV and Radio spending are the strongest predictors of sales. Newspaper has very little impact.
 
 ## How to Run
 ```bash
-python movie_rating_prediction.py
+python sales_prediction.py
 ```
