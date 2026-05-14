@@ -20,7 +20,3 @@ Predict whether a passenger survived the Titanic disaster based on features like
 - **Accuracy:** ~80%
 - **Key finding:** Gender (female) and passenger class (1st class) had the strongest positive influence on survival
 
-## How to Run
-```bash
-python titanic_prediction.py
-```
